@@ -27,8 +27,8 @@ jobs:
         python-version: '3.10'
     - name: Install all necessary packages
       run: |
-        pip install --upgrade pip
-        pip install playwright pandas numpy openpyxl tqdm
+        pip install python -m pip install --upgrade pip
+        pip install playwright pandas numpy tqdm openpyxl nest_asyncio jupyter
         playwright install firefox
     - name: Scraping today's data
       run: jupyter nbconvert --to notebook --execute "tracking-prices-in-serbia.ipynb" --stdout
